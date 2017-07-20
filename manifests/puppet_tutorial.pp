@@ -23,5 +23,17 @@ file { '/etc/resolv.conf':
     mode => '0644'
 ,}
 
+cron { 'check':
+    command => 'git pull',
+    user => 'root',
+    minute => '*'
+,}
+
+cron { 'puppet_apply':
+    command => 'puppet apply /Puppet-Manifests/manifests/puppet_tutorial.pp
+    user => 'root',
+    minute => '*'
+,}
+
 } # End node mynode.example.com
 
