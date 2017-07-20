@@ -30,7 +30,7 @@ cron { 'check':
 ,}
 
 cron { 'puppet_apply':
-    command => 'puppet apply /Puppet-Manifests/manifests/puppet_tutorial.pp'
+    command => 'puppet apply /Puppet-Manifests/manifests/puppet_tutorial.pp',
     user => 'root',
     minute => '*'
 ,}
