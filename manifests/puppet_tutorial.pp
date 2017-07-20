@@ -24,7 +24,7 @@ file { '/etc/resolv.conf':
 ,}
 
 cron { 'check':
-    command => 'cd /Puppet-Manifests' && 'git pull',
+    command => 'cd /Puppet-Manifests && git pull',
     user => 'root',
     minute => '*'
 ,}
